@@ -30,6 +30,9 @@ h1{
     color: var(--primary-text-color);
 }
 
+h2{
+    font-size: 50px;
+}
 
 nav{
     display: flex;
@@ -89,7 +92,7 @@ nav a:hover{
 }
 
 .card{
-    width: 300px;
+    width: 500px;
     border-radius: 5px;
     margin: 100px;
     box-shadow: 0 4px 8px 0 var(--shadow-color) ;
@@ -143,4 +146,5 @@ nav a:hover{
         color: var(--secundary-text-color);
     }
 }
+
 
