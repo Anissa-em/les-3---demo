@@ -1,0 +1,149 @@
+:root{
+    --main-background-color: white;
+    --main-text-color: black;
+    --secundary-background-color: rgb(25, 13, 0);
+    --secundary-text-color:white;
+    --shadow-color: rgb(25, 13, 0);
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    font-size: 30px;
+    box-sizing: border-box;
+
+}
+
+h1{
+    color: var(--primary-text-color);
+}
+
+h2{
+    font-size: 50px;
+}
+
+nav{
+    display: flex;
+    gap: 50px;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav a{
+    color: var(--main-text-color);
+    transition: color 1s, background 2s;
+}
+
+nav a:hover{
+    background: var(--secundary-background-color);
+    color: var(--secundary-text-color);
+
+}
+
+.active{
+    text-decoration: line-through ;
+}
+
+.hero-container{
+    display: flex;
+    height: 100vh;
+}
+
+.column-one, .column-two{
+    width: 50%;
+    height: 100%;
+}
+
+.column-one{
+    background-image: url('https://img.freepik.com/premium-photo/frog-wearing-hat-that-says-magic-it_900101-27635.jpg');
+    background-position: center, center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.column-two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.cards-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px 0;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 500px;
+    border-radius: 5px;
+    margin: 100px;
+    box-shadow: 0 4px 8px 0 var(--shadow-color) ;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card:hover{
+    box-shadow: 0 8px 16px 0 var(--shadow-color) ;
+}
+
+.card-image{
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.card-text{
+    padding: 10px 20px;
+}
+
+.card-image:hover{
+    filter: blur(10px);
+}
+.footer{
+    /* background: var(--main-text-color);
+    color: var(--secundary-text-color); */
+    text-align: center ;
+    padding: 15px 0;
+    font-size: 20px;
+
+}
+
+@media (width < 600px){
+    header{
+        flex-flow: column;
+        color: var(--secundary-text-color);
+        background: var(--shadow-color);
+        padding-bottom: 10px;
+    }
+
+    .column-one{
+        display: none;
+    }
+
+    .column-two{
+        width: 100%;
+        background-image: url('https://img.freepik.com/premium-photo/frog-wearing-hat-that-says-magic-it_900101-27635.jpg');
+        background-position: center, center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: var(--secundary-text-color);
+    }
+}
+
